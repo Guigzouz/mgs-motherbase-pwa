@@ -27,15 +27,6 @@ const BottomTabMenu = ({ configs, onMenuChange = (arg) => {} }) => {
                 iconSize={config.iconSize}
                 iconColor={config.iconColor}
               />
-              <Typography.Paragraph
-                style={{
-                  color: config.iconColor,
-                  fontFamily: "redensek",
-                  fontSize: "20",
-                }}
-              >
-                {config.displayName}
-              </Typography.Paragraph>
             </Button.Tab>
           </Link>
         );

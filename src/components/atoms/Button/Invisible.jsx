@@ -17,6 +17,7 @@ const Invisible = React.forwardRef(({ children, ...props }, ref) => {
 // Styled component for the button
 const StyledInvisible = styled.div`
   font-family: "redensek";
+  cursor: pointer;
 `;
 
 export default Invisible;

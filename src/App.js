@@ -6,6 +6,7 @@ import { BottomTabMenu } from "./components/molecules";
 import ThemeSwitch from "./components/molecules/ThemeSwitch"; // Import ThemeSwitch
 import Profile from "./pages/profile";
 import { useNightTheme } from "./providers/NightThemeProvider";
+import { CategoryMenuProvider } from "./providers/CategoryMenuProvider";
 
 export default function App() {
   const { nightTheme, toggleTheme } = useNightTheme(); // Get the theme toggle function
@@ -38,7 +39,14 @@ export default function App() {
         {/* Define your Routes */}
         <Routes>
           <Route path="/profile" element={<Profile />} />
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <CategoryMenuProvider>
+                <Home />
+              </CategoryMenuProvider>
+            }
+          />
         </Routes>
         <nav>
           <BottomTabMenu
@@ -47,11 +55,13 @@ export default function App() {
                 displayName: "Home",
                 slug: "",
                 iconName: "FaHome",
+                iconSize: 28,
               },
               {
                 displayName: "Profile",
                 slug: "profile",
                 iconName: "FaRegUserCircle",
+                iconSize: 28,
               },
             ]}
           />

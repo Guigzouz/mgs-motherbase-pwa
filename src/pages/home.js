@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Typography, Container } from "../components/atoms";
-import { BottomTabMenu, ThemeSwitch } from "../components/molecules";
-import { Selector } from "../components/organisms";
+import { Button, Typography } from "../components/atoms";
+import { Details, Selector } from "../components/organisms";
 import { CodenameDisplay, StyledView } from "../components/nanites";
 
-import { fetchScoreCount } from "../store/counterSlice";
 import { useScore } from "../providers/ScoreProvider";
+import { useCategoryMenu } from "../providers/CategoryMenuProvider";
+import { ActionCategoryMenu } from "../components/molecules";
+import MotherBase from "../components/pages/MotherBase";
 
 const MainStyledView = styled.div`
-  width: 100%;
   height: 100%;
   padding: 20px;
   justify-content: space-between;
@@ -17,8 +17,16 @@ const MainStyledView = styled.div`
   color: ${({ theme }) => theme.text};
 `;
 
+const StyledContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+`;
+
 const Home = () => {
   const { scoreCount } = useScore();
+  const { handleMenuChange, motherBaseProps } = useCategoryMenu();
 
   return (
     <MainStyledView>
@@ -30,8 +38,6 @@ const Home = () => {
           style={{
             fontSize: 36,
             paddingHorizontal: 25,
-            paddingTop: 25,
-            paddingBottom: 10,
             fontFamily: "redensek",
             whiteSpace: "nowrap",
           }}
@@ -46,9 +52,30 @@ const Home = () => {
         </Typography.Title>
       </StyledView>
 
-      <StyledView>
-        <Selector.CategorySelectorAndMotherBase />
-      </StyledView>
+      <StyledContainer>
+        <Button.Invisible>
+          <Typography.Title
+            style={{
+              fontSize: 32,
+              paddingHorizontal: 25,
+              paddingTop: 25,
+              paddingBottom: 10,
+              fontFamily: "redensek",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {motherBaseProps.displayTitle}
+          </Typography.Title>
+          <MotherBase
+            style={{
+              height: 100,
+              border: "red",
+            }}
+          />
+        </Button.Invisible>
+        <ActionCategoryMenu handleMenuChange={handleMenuChange} />
+        <Details.CategoryDetails slug={motherBaseProps.slug} />
+      </StyledContainer>
     </MainStyledView>
   );
 };

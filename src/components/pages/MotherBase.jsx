@@ -1,8 +1,9 @@
 import React from "react";
 import { Lights, Meshs, Scene } from "../../playground";
-import { OrbitControls, Text } from "@react-three/drei";
+import { useCategoryMenu } from "../../providers/CategoryMenuProvider";
 
 const MotherBase = (props) => {
+  const { motherBaseProps } = useCategoryMenu();
   const { style } = props;
 
   return (
@@ -24,7 +25,7 @@ const MotherBase = (props) => {
           meshRef.current.rotation.z += 0.5 * delta;
         }}
         mesh={{ position: [0, 0, 0] }}
-        materials={{ color: style.color }}
+        materials={{ color: motherBaseProps.color }}
         depth={0.8}
       />
     </Scene>

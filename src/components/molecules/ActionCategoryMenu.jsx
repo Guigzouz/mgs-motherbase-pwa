@@ -1,6 +1,9 @@
 import { Container, Typography, Button, Icon } from "../atoms";
+import { useCategoryMenu } from "../../providers/CategoryMenuProvider";
 
-const ActionCategoryMenu = ({ configs, onMenuChange }) => {
+const ActionCategoryMenu = ({ handleMenuChange }) => {
+  const { configs } = useCategoryMenu();
+
   return (
     <Container.Menu
       style={{
@@ -13,8 +16,8 @@ const ActionCategoryMenu = ({ configs, onMenuChange }) => {
       {configs.map((config, i) => (
         <Button.Base
           key={i}
-          onPress={() => onMenuChange(config.slug)}
-          style={{ gap: 30, padding: 15 }}
+          onPress={() => handleMenuChange(config.slug)}
+          style={{ gap: 30, padding: 15, cursor: "pointer" }}
         >
           <Typography.Paragraph
             style={{ fontFamily: "redensek", fontSize: 20 }}

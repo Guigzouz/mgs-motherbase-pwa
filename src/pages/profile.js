@@ -9,7 +9,6 @@ const Profile = () => {
   const { scoreCount } = useScore();
 
   const MainStyledView = styled.div`
-    width: 100%;
     justify-content: space-between;
     height: 100%;
     padding: 20px;
@@ -25,9 +24,6 @@ const Profile = () => {
         <CodenameDisplay
           style={{
             fontSize: 36,
-            paddingHorizontal: 25,
-            paddingTop: 25,
-            paddingBottom: 10,
             fontFamily: "redensek",
             whiteSpace: "nowrap",
           }}
