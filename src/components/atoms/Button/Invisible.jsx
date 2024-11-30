@@ -8,7 +8,7 @@ const Invisible = React.forwardRef(({ children, ...props }, ref) => {
   }
 
   return (
-    <StyledInvisible ref={ref} {...props}>
+    <StyledInvisible ref={ref} onClick={props.onPress} {...props}>
       {children}
     </StyledInvisible>
   );
@@ -18,6 +18,7 @@ const Invisible = React.forwardRef(({ children, ...props }, ref) => {
 const StyledInvisible = styled.div`
   font-family: "redensek";
   cursor: pointer;
+  border-radius: 25px;
 `;
 
 export default Invisible;

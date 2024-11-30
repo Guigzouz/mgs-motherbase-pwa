@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledAbsoluteCard = styled.div`
-  width: fit-content;
   position: absolute;
+  display: flex;
   background-color: white;
   z-index: 1;
-  top: 20px;
-  right: 20px;
+  border-radius: 50px;
+  top: 15px;
+  right: 15px;
 `;
 
 const AbsoluteCard = ({ children }) => {

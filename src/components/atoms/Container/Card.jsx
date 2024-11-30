@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-  width: fit-content;
+  width: 100%;
   border: solid;
   background-color: white;
   z-index: 1;

@@ -23,6 +23,7 @@ const StyledBase = styled.button`
   align-items: center;
   border: solid;
   font-family: "redensek";
+  width: 250px;
 `;
 
 export default Base;

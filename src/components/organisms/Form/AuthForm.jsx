@@ -137,51 +137,54 @@ const AuthForm = ({ ...props }) => {
             ]}
           />
 
-          <Button.Base
-            onPress={handleSignUp}
-            style={{
-              padding: "0.8rem 2rem",
-              backgroundColor: "#fdd835", // medium yellow
-              color: "black",
-              borderRadius: "6px",
-              fontSize: "1rem",
-              transition: "background-color 0.2s ease",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#fbc02d")} // darker yellow
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#fdd835")}
-          >
-            <Typography.Title
+          <Container.Menu style={{ display: "flex", flexDirection: "row" }}>
+            <Button.Base
+              onPress={handleSignUp}
               style={{
+                padding: "0.8rem 2rem",
+                backgroundColor: "#fdd835", // medium yellow
+                color: "black",
+                borderRadius: "6px",
                 fontSize: "1rem",
-                fontWeight: "bold",
-                fontFamily: "redensek",
+                transition: "background-color 0.2s ease",
+              }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#fbc02d")} // darker yellow
+              onMouseLeave={(e) => (e.target.style.backgroundColor = "#fdd835")}
+            >
+              <Typography.Title
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  fontFamily: "redensek",
+                }}
+              >
+                Sign Up
+              </Typography.Title>
+            </Button.Base>
+            <Button.Base
+              onPress={handleLogIn}
+              style={{
+                padding: "0.8rem 2rem",
+                backgroundColor: "#eeeeee",
+                color: "black",
+                borderRadius: "6px",
+                fontSize: "1rem",
+                cursor: "pointer",
+                transition: "background-color 0.2s ease",
               }}
             >
-              Sign Up
-            </Typography.Title>
-          </Button.Base>
-          <Button.Base
-            onPress={handleLogIn}
-            style={{
-              padding: "0.8rem 2rem",
-              backgroundColor: "#eeeeee",
-              color: "white",
-              borderRadius: "6px",
-              fontSize: "1rem",
-              cursor: "pointer",
-              transition: "background-color 0.2s ease",
-            }}
-          >
-            <Typography.Title
-              style={{
-                fontSize: "1rem",
-                fontWeight: "bold",
-                fontFamily: "redensek",
-              }}
-            >
-              Log In
-            </Typography.Title>
-          </Button.Base>
+              <Typography.Title
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  fontFamily: "redensek",
+                }}
+              >
+                Log In
+              </Typography.Title>
+            </Button.Base>
+          </Container.Menu>
+
           {error && (
             <Typography.Title
               style={{

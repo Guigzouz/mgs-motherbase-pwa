@@ -48,7 +48,7 @@ export default function App() {
             }
           />
         </Routes>
-        <nav>
+        <nav style={{ position: "absolute", width: "100%", bottom: "0px" }}>
           <BottomTabMenu
             configs={[
               {

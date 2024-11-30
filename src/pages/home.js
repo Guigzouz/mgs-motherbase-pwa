@@ -74,7 +74,10 @@ const Home = () => {
           />
         </Button.Invisible>
         <ActionCategoryMenu handleMenuChange={handleMenuChange} />
-        <Details.CategoryDetails slug={motherBaseProps.slug} />
+        <Details.CategoryDetails
+          style={{ width: "100%" }}
+          slug={motherBaseProps.slug}
+        />
       </StyledContainer>
     </MainStyledView>
   );

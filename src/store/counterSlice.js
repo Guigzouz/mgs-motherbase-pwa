@@ -36,9 +36,10 @@ const counterSlice = createSlice({
     error: null,
   },
   reducers: {
-    incremented: (state) => {
-      state.value += 1;
+    incremented: (state, action) => {
+      state.value += action.payload.value || 1; // Default increment is 1
     },
+
     decremented: (state) => {
       state.value -= 1;
     },

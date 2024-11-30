@@ -4,11 +4,14 @@ import { Container, Button, Icon } from "../atoms";
 
 const ThemeSwitch = ({ onClick, iconName, iconSize = 18, ...props }) => {
   return (
-    <Container.Menu style={{ ...props }}>
-      <Button.Base style={{ padding: 5, cursor: "pointer" }} onPress={onClick}>
+    <Container.AbsoluteCard style={{ ...props }}>
+      <Button.Invisible
+        style={{ padding: 5, cursor: "pointer", display: "flex" }}
+        onPress={onClick}
+      >
         <Icon.Base iconName={iconName} iconSize={iconSize} />
-      </Button.Base>
-    </Container.Menu>
+      </Button.Invisible>
+    </Container.AbsoluteCard>
   );
 };
 
