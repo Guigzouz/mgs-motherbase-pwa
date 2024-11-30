@@ -33,7 +33,7 @@ this repository contains the front-end of the application, to successfully use t
 
 ![screenshot](image.png)
 
-Based on Metal Gear Solid: PW mother base management "mini-game" you will **as of now** be able to make a secured account with your own immutable codename and you will also be able to recruit human resources to strengthen your motherbase differents fields of action while overall managing you gmp count.
+Based on Metal Gear Solid: PW mother base management "mini-game" you will **as of now** be able to make a secured account with your own immutable codename and you will also be able to "recruit" human resources to strengthen your motherbase
 
 ## what comes next ?
 
