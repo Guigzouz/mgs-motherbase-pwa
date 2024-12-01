@@ -37,7 +37,7 @@ Based on Metal Gear Solid: PW mother base management "mini-game" you will **as o
 
 ## what comes next ?
 
-As of now the project is at a very basic level, and the gmp_count is yet just a redux countSlice that increases your score (much like an idle game), but the purpose is not to make an idle game but rather a management game worldwide, here below a list of features that i plan on doing next
+As of now the project is at a very basic level, and the gmp_count is yet just a fixed "starter" score for every player, but here is a list on what i plan to do next :
 
 - Overall scoreboard of users gmp count
 - "External Ops" that will allow two users's motherbase to "fight" and gain/loose resources
